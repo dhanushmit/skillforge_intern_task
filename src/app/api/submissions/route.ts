@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { NextResponse } from "next/server";
 import { submissionSchema } from "@/lib/submitSchema";
 import { supabaseAdmin } from "@/lib/supabaseAdmin";
