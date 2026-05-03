@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Send, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 export default function Waitlist() {
   const [email, setEmail] = useState('');
@@ -29,7 +29,8 @@ export default function Waitlist() {
         setStatus('error');
         setMessage(data.error || 'Something went wrong. Please try again.');
       }
-    } catch (error) {
+    } catch (err) {
+      console.error(err);
       setStatus('error');
       setMessage('Failed to connect to the server.');
     }

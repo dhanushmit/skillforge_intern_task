@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 // In-memory storage (for demo - in production use real database)
-let contactMessages: any[] = [];
+const contactMessages: {
+  id: number;
+  name: string;
+  email: string;
+  message: string;
+  created_at: string;
+  status: string;
+}[] = [];
 
 export async function POST(request: NextRequest) {
   try {

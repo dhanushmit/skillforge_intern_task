@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Code2, ArrowRight, Star, Rocket, Sparkles, MonitorSmartphone } from 'lucide-react';
+import { Code2, ArrowRight, Star, Sparkles, MonitorSmartphone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Hero() {

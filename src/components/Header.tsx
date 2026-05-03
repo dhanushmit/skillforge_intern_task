@@ -6,10 +6,16 @@ import { useEffect, useState } from 'react';
 
 export default function Header() {
   const [isDark, setIsDark] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsDark(document.documentElement.classList.contains('dark'));
   }, []);
+
+  if (!mounted) return null; // Avoid hydration mismatch for theme-dependent icons
 
   const toggleTheme = () => {
     if (document.documentElement.classList.contains('dark')) {

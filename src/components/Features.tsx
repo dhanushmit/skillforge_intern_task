@@ -1,6 +1,6 @@
 'use client';
 
-import { Blocks, Layers, Layout, Palette, Smartphone, Zap, BrainCircuit, Target, Trophy, Users, BarChart } from 'lucide-react';
+import { Zap, BrainCircuit, Target, Trophy, Users, BarChart } from 'lucide-react';
 
 const features = [
   {
@@ -47,7 +47,7 @@ export default function Features() {
             Built for performance
           </h2>
           <p className="text-muted-foreground text-lg">
-            We've completely reimagined online learning. Our platform combines
+            We&apos;ve completely reimagined online learning. Our platform combines
             cutting-edge AI technology with proven educational psychology.
           </p>
         </div>

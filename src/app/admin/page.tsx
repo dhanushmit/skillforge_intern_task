@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Users, MessageSquare, Mail, Calendar, TrendingUp, BarChart, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
@@ -26,7 +26,6 @@ export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState<'overview' | 'waitlist' | 'messages'>('overview');
   const [waitlistData, setWaitlistData] = useState<WaitlistEntry[]>([]);
   const [contactData, setContactData] = useState<ContactMessage[]>([]);
-  const [loading, setLoading] = useState(true);
   const [authenticated, setAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
 
@@ -43,7 +42,6 @@ export default function AdminDashboard() {
   };
 
   const fetchData = async () => {
-    setLoading(true);
     try {
       const [waitlistRes, contactRes] = await Promise.all([
         fetch(`/api/waitlist?secret=${adminSecret}`),
@@ -58,7 +56,6 @@ export default function AdminDashboard() {
     } catch (error) {
       console.error('Error fetching data:', error);
     }
-    setLoading(false);
   };
 
   const formatDate = (dateString: string) => {
@@ -191,7 +188,7 @@ export default function AdminDashboard() {
                 return (
                   <button
                     key={tab.id}
-                    onClick={() => setActiveTab(tab.id as any)}
+                    onClick={() => setActiveTab(tab.id as typeof activeTab)}
                     className={`flex-1 px-6 py-4 font-semibold transition-colors flex items-center justify-center space-x-2 ${
                       activeTab === tab.id
                         ? 'bg-white text-blue-600 border-b-2 border-blue-600 shadow-sm'

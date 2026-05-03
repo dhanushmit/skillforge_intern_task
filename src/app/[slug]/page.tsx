@@ -1,4 +1,3 @@
-import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
@@ -26,7 +25,7 @@ const pageData: Record<string, { title: string, content: React.ReactNode }> = {
     content: (
       <div className="space-y-4 text-muted-foreground font-medium">
         <p>SkillForge was founded with a single mission: to democratize tech education and make world-class learning accessible to everyone, anywhere.</p>
-        <p>We believe that traditional education is broken. By combining expert instruction with AI-driven adaptive learning, we're building the future of skills development.</p>
+        <p>We believe that traditional education is broken. By combining expert instruction with AI-driven adaptive learning, we&apos;re building the future of skills development.</p>
       </div>
     )
   },
@@ -34,7 +33,7 @@ const pageData: Record<string, { title: string, content: React.ReactNode }> = {
     title: 'Careers at SkillForge',
     content: (
       <div className="space-y-4 text-muted-foreground font-medium">
-        <p>Join our team and help us build the next generation of education. We're a fully remote company with competitive benefits.</p>
+        <p>Join our team and help us build the next generation of education. We&apos;re a fully remote company with competitive benefits.</p>
         <div className="p-6 bg-secondary border border-border rounded-xl mt-6 shadow-sm">
           <h4 className="font-bold text-foreground mb-2">Open Positions</h4>
           <p className="text-muted-foreground text-sm">No open positions currently available. Check back soon or <Link href="/#contact" className="text-primary font-bold hover:underline">send us your resume</Link>.</p>

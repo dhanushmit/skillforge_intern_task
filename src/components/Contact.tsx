@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -29,7 +29,8 @@ export default function Contact() {
         setStatus('error');
         setResponseMsg(data.error || 'Failed to send message.');
       }
-    } catch (error) {
+    } catch (err) {
+      console.error(err);
       setStatus('error');
       setResponseMsg('Server connection failed.');
     }
@@ -49,7 +50,7 @@ export default function Contact() {
               Contact us
             </h2>
             <p className="text-muted-foreground text-lg">
-              Have questions? We'd love to hear from you.
+              Have questions? We&apos;d love to hear from you.
             </p>
           </div>
 

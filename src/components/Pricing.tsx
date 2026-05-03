@@ -114,7 +114,7 @@ export default function Pricing() {
               </Link>
 
               <div className="space-y-4 mt-auto">
-                <h4 className="text-sm font-medium">What's included:</h4>
+                <h4 className="text-sm font-medium">What&apos;s included:</h4>
                 <ul className="space-y-3">
                   {tier.features.map((feature, i) => (
                     <li key={i} className="flex items-start">

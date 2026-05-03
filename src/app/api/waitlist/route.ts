@@ -1,7 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 // In-memory storage (for demo - in production use real database)
-let waitlistEntries: any[] = [];
+const waitlistEntries: {
+  id: number;
+  name: string;
+  email: string;
+  interest: string;
+  created_at: string;
+}[] = [];
 
 export async function POST(request: NextRequest) {
   try {

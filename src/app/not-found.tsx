@@ -49,8 +49,8 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Oops! The page you're looking for seems to have wandered off. 
-            Let's get you back on track.
+            Oops! The page you&apos;re looking for seems to have wandered off. 
+            Let&apos;s get you back on track.
           </p>
         </motion.div>
 

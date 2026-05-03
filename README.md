@@ -92,45 +92,40 @@ skillforge/
 └── README.md                 # This file
 ```
 
-## 🚀 Getting Started
+## 🚀 How to Run This Project
 
-### Prerequisites
-- Node.js 18+ installed
-- npm or yarn package manager
+Follow these steps to get the project running locally:
 
-### Installation
+### 1. Prerequisites
+- **Node.js** (v18.0.0 or higher)
+- **npm** (comes with Node.js)
 
-1. **Extract the project**
-   ```bash
-   # Extract skillforge.zip to your desired location
-   cd skillforge
-   ```
+### 2. Installation
+Open your terminal in the `mindgrove-web` folder and run:
+```bash
+npm install
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+### 3. Development Mode
+Start the development server:
+```bash
+npm run dev
+```
+The site will be available at `http://localhost:3000`.
 
-3. **Set up environment variables**
-   ```bash
-   # The .env.local file is already configured with demo values
-   # No changes needed for local development
-   ```
+### 4. Production Build
+To test the production version:
+```bash
+npm run build
+npm start
+```
 
-4. **Run the development server**
-   ```bash
-   npm run dev
-   ```
+## 🔐 Admin Dashboard Access
 
-5. **Open in browser**
-   ```
-   http://localhost:3000
-   ```
+The project includes a functional admin dashboard to view waitlist entries and contact messages.
 
-### Admin Dashboard Access
-
-- URL: `http://localhost:3000/admin`
-- Password: `skillforge_admin_2024`
+- **URL**: `http://localhost:3000/admin`
+- **Demo Password**: `admin`
 
 ## 📸 Screenshots
 
