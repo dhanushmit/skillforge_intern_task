@@ -2,8 +2,6 @@
 
 A stunning, production-ready SaaS landing page built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. Features beautiful animations, responsive design, and a fully functional backend.
 
-![SkillForge Preview](https://via.placeholder.com/1200x600/667eea/ffffff?text=SkillForge+Landing+Page)
-
 ## 🚀 Live Demo
 
 **Local Development**: `http://localhost:3000`
